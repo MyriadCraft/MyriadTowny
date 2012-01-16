@@ -1,0 +1,9 @@
+name: MyriadTowny
+main: me.meiamsome.myriadtowny.MyriadTowny
+version: 0.0.1
+author: meiamsome
+description: Woo yeah!
+Permissions:
+ mt.colorChat:
+  default:op
+  description:Alows a user to write in colours
