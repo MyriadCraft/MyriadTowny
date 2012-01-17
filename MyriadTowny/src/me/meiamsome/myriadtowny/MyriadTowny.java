@@ -50,7 +50,13 @@ public class MyriadTowny extends JavaPlugin {
 		@Override
 		public void onPlayerChat(PlayerChatEvent event) {
 			//if(!townyChat.getTowny().getPlayerMode(event.getPlayer()).isEmpty()) {
-				if(event.getPlayer().hasPermission("mt.colorChat")) event.setMessage(event.getMessage().replaceAll("[^/]&", "§"));
+			String a="amp";
+			if(event.getPlayer().hasPermission("mt.colorChat")) {
+				while(event.getMessage().contains("["+a+"]")) a+="1";
+				 event.setMessage(event.getMessage().replaceAll("\\&", a));
+				 event.setMessage(event.getMessage().replaceAll("&", "§"));
+				 event.setMessage(event.getMessage().replaceAll(a, "&"));
+			}
 			//}
 		}
     }
