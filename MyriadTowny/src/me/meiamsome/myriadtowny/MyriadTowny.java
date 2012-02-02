@@ -53,9 +53,10 @@ public class MyriadTowny extends JavaPlugin {
 			String a="amp";
 			if(event.getPlayer().hasPermission("mt.colorChat")) {
 				while(event.getMessage().contains("["+a+"]")) a+="1";
-				 event.setMessage(event.getMessage().replaceAll("/&", a));
-				 event.setMessage(event.getMessage().replaceAll("&", "§"));
-				 event.setMessage(event.getMessage().replaceAll(a, "&"));
+				a="["+a+"]";
+				event.setMessage(event.getMessage().replaceAll("/&", a));
+				event.setMessage(event.getMessage().replaceAll("&", "§"));
+				event.setMessage(event.getMessage().replaceAll(a, "&"));
 			}
 			//}
 		}
