@@ -10,7 +10,6 @@ import org.bukkit.event.player.PlayerListener;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.util.permissions.BroadcastPermissions;
 
 import com.palmergames.bukkit.TownyChat.Chat;
 import com.palmergames.bukkit.towny.Towny;
@@ -59,7 +58,7 @@ public class MyriadTowny extends JavaPlugin {
 				event.setMessage(event.getMessage().replaceAll(a, "&"));
 			} else {
 				if(event.getMessage().contains("§")) {
-					getServer().broadcastMessage(event.getPlayer().getDisplayName()+" uses hax!");
+					getServer().broadcastMessage(event.getPlayer().getDisplayName()+" uses §dh§ba§6c§2k§3s!");
 					event.getPlayer().kickPlayer("Kicked for §dh§ba§6c§2k§3s.");
 					event.setCancelled(true);
 				}
