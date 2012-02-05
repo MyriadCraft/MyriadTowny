@@ -60,7 +60,7 @@ public class MyriadTowny extends JavaPlugin {
 			} else {
 				if(event.getMessage().contains("§")) {
 					getServer().broadcastMessage(event.getPlayer().getDisplayName()+" uses hax!");
-					event.getPlayer().kickPlayer("Kicked for hacks.");
+					event.getPlayer().kickPlayer("Kicked for §dh§ba§6c§2k§3s.");
 					event.setCancelled(true);
 				}
 			}
